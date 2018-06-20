@@ -5,7 +5,6 @@ project(eosio_token VERSION 1.0.0)
 if(WASM_ROOT STREQUAL "" OR NOT WASM_ROOT)
    set(WASM_ROOT ${CMAKE_INSTALL_PREFIX})
 endif()
-message(STATUS "WR ${WASM_ROOT}")
 
 list(APPEND CMAKE_MODULE_PATH ${WASM_ROOT}/lib/cmake)
 include(EosioWasmToolchain)
