@@ -10,6 +10,4 @@ list(APPEND CMAKE_MODULE_PATH ${WASM_ROOT}/lib/cmake)
 include(EosioWasmToolchain)
 
 add_executable(eosio.token ${CMAKE_SOURCE_DIR}/src/eosio.token.cpp)
-target_include_directories(eosio.token PUBLIC ${STANDARD_INCLUDES} ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(eosio.token PRIVATE ${STANDARD_LIBS})
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION ${WASM_ROOT}/eosiosdk/include)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION ${WASM_ROOT}/eosio.wasmsdk/include)
